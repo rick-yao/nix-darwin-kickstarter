@@ -1,17 +1,11 @@
 { ... }:
 
 let
-  # please replace xxx with your username
-  username = "xxx";
-in
-{
+  # NOTE: please replace xxx with your username
+  username = "rick";
+in {
   # import sub modules
-  imports = [
-    ./bash.nix
-    ./core.nix
-    ./git.nix
-    ./starship.nix
-  ];
+  imports = [ ./bash.nix ./core.nix ./git.nix ./starship.nix ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
