@@ -1,5 +1,4 @@
-
-{ ... } @ args:
+{ ... }@args:
 
 #############################################################
 #
@@ -8,11 +7,10 @@
 #############################################################
 
 let
-  # TODO change this to your hostname
-  hostname = "your-hostname";
-  username = "xxx";
-in
-{
+  # NOTE: change this to your hostname
+  hostname = "rick";
+  username = "rick";
+in {
   networking.hostName = hostname;
   networking.computerName = hostname;
   system.defaults.smb.NetBIOSName = hostname;

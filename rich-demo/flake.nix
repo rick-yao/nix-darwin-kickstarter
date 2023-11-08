@@ -46,11 +46,12 @@
   # parameters in `outputs` are defined in `inputs` and can be referenced by their names. 
   # However, `self` is an exception, this special parameter points to the `outputs` itself (self-reference)
   # The `@` syntax here is used to alias the attribute set of the inputs's parameter, making it convenient to use inside the function.
-  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }:{
-    # TODO please update the whole "hostname" placeholder string to your own hostname!
+  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }: {
+    # NOTE: please update the whole "hostname" placeholder string to your own hostname!
     # such as darwinConfigurations.mymac = darwin.lib.darwinSystem {
     darwinConfigurations."hostname" = darwin.lib.darwinSystem {
-      system = "x86_64-darwin";  # change this to "aarch64-darwin" if you are using Apple Silicon
+      system =
+        "aarch64-darwin"; # change this to "aarch64-darwin" if you are using Apple Silicon
       modules = [
         ./modules/nix-core.nix
         ./modules/system.nix
@@ -66,13 +67,13 @@
 
           home-manager.extraSpecialArgs = inputs;
 
-          # TODO replace "yourusername" with your own username!
-          home-manager.users.yourusername = import ./home;
+          # NOTE: replace "yourusername" with your own username!
+          home-manager.users.rick = import ./home;
         }
       ];
     };
 
     # nix codee formmater
-    formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
+    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.alejandra;
   };
 }
