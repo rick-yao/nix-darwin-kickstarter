@@ -16,17 +16,17 @@ darwin-set-proxy:
 
 darwin: darwin-set-proxy
 	# NOTE: update hostname here!
-	nix build .#darwinConfigurations.hostname.system \
+	nix build .#darwinConfigurations.ricks-Virtual-Machine.system \
 		--extra-experimental-features 'nix-command flakes'
 
-	./result/sw/bin/darwin-rebuild switch --flake .#hostname
+	./result/sw/bin/darwin-rebuild switch --flake .#ricks-Virtual-Machine
 
 darwin-debug: darwin-set-proxy
 	# NOTE: update hostname here!
-	nix build .#darwinConfigurations.hostname.system --show-trace --verbose \
+	nix build .#darwinConfigurations.ricks-Virtual-Machine.system --show-trace --verbose \
 		--extra-experimental-features 'nix-command flakes'
 
-	./result/sw/bin/darwin-rebuild switch --flake .#hostname --show-trace --verbose
+	./result/sw/bin/darwin-rebuild switch --flake .#ricks-Virtual-Machine --show-trace --verbose
 
 ############################################################################
 #

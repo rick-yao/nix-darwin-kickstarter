@@ -82,26 +82,26 @@
     # `brew install --cask`
     # NOTE: Feel free to add your favorite apps here.
     casks = [
-      "firefox"
+      # "firefox"
       "google-chrome"
       "visual-studio-code"
 
       # IM & audio & remote desktop & meeting
-      "telegram"
-      "discord"
+      # "telegram"
+      # "discord"
 
-      "anki"
+      # "anki"
       # "clashx" # proxy tool
-      "iina" # video player
-      "openinterminal-lite" # open current folder in terminal
-      "syncthing" # file sync
-      "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
-      "iglance" # beautiful system monitor
-      "eudic" # 欧路词典
+      # "iina" # video player
+      # "openinterminal-lite" # open current folder in terminal
+      # "syncthing" # file sync
+      # "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
+      # "iglance" # beautiful system monitor
+      # "eudic" # 欧路词典
 
       # Development
-      "insomnia" # REST client
-      "wireshark" # network analyzer
+      # "insomnia" # REST client
+      # "wireshark" # network analyzer
     ];
   };
 }
